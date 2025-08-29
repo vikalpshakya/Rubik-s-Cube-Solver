@@ -1,7 +1,11 @@
 //
+<<<<<<< HEAD
 // Created by Vikalp Shakya 
+=======
+//
+>>>>>>> b0c1663 (updated)
 
-#include<bits/stdc++.h>
+#include "../bits/files.h"
 #include "../Model/RubiksCube.h"
 
 #ifndef RUBIKS_CUBE_SOLVER_BFSSOLVER_H

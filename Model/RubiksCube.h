@@ -1,12 +1,12 @@
 //
-// Created by Abdulla Khan on 6/10/24.
 //
 
 #ifndef RUBIKS_CUBE_SOLVER_RUBIKSCUBE_H
 #define RUBIKS_CUBE_SOLVER_RUBIKSCUBE_H
 
-#include "bits/stdc++.h"
-
+#include "../bits/files.h"
+#include <iostream>
+#include <vector>
 using namespace std;
 
 /**

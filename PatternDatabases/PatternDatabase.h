@@ -1,5 +1,4 @@
 //
-// Created by Lakshya Mittal on 17-02-2022.
 //
 
 #ifndef RUBIKS_CUBE_SOLVER_PATTERNDATABASE_H
@@ -7,7 +6,7 @@
 
 #include "../Model/RubiksCube.h"
 #include "NibbleArray.h"
-#include "bits/stdc++.h"
+#include "../bits/files.h"
 
 using namespace std;
 

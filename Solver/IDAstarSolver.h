@@ -1,8 +1,7 @@
 //
-// Created by Abdulla Khan on 6-10-2024.
 //
 
-#include<bits/stdc++.h>
+#include"../bits/files.h"
 #include "../Model/RubiksCube.h"
 // #include "../Model/PatternDatabase/PatternDatabase.h"
 #include "../PatternDatabases/CornerPatternDatabase.h"

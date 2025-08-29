@@ -1,8 +1,8 @@
 //
-// Created by Abdulla Khan on 06-10-2024.
+// Created by Vikalp  on 06-10-2024.
 //
 
-#include<bits/stdc++.h>
+#include"../bits/files.h"
 #include "../Model/RubiksCube.h"
 
 #ifndef RUBIKS_CUBE_SOLVER_DFSSOLVER_H
@@ -49,3 +49,4 @@ public:
 
 
 #endif //RUBIKS_CUBE_SOLVER_DFSSOLVER_H
+

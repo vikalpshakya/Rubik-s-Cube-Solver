@@ -1,11 +1,12 @@
 //
-// Created by Lakshya Mittal on 17-02-2022.
 //
+#include "../bits/files.h"
+#include <iostream>
+#include <vector>
 
 #ifndef RUBIKS_CUBE_SOLVER_NIBBLEARRAY_H
 #define RUBIKS_CUBE_SOLVER_NIBBLEARRAY_H
 
-#include <bits/stdc++.h>
 
 using namespace std;
 

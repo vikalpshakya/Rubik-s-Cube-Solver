@@ -1,29 +1,28 @@
 //
-// Created by Lakshya Mittal on 17-12-2021.
-//
+// Created by Vikalp Shakya on 17-02-2025.
+#include "bits/files.h"
 
-#include <bits/stdc++.h>
-//#include "Model/RubiksCube3dArray.cpp"
-//#include "Model/RubiksCube1dArray.cpp"
-// #include "Model/RubiksCubeBitboard.cpp"
-// #include "Solver/DFSSolver.h"
-// #include "Solver/BFSSolver.h"
-// #include "Solver/IDDFSSolver.h"
-#include "Solver/IDAstarSolver.h"
-//#include "PatternDatabases/CornerPatternDatabase.h"
-#include "PatternDatabases/CornerDBMaker.h"
+#include "Model/RubiksCube3dArray.cpp"
+// #include "Model/RubiksCube1dArray.cpp"
+  #include "Model/RubiksCubeBitboard.cpp"
+  // #include "Solver/DFSSolver.h"
+  #include "Solver/BFSSolver.h"
+  // #include "Solver/IDDFSSolver.h"
+  // #include "Solver/IDAstarSolver.h"
+// #include "PatternDatabases/CornerPatternDatabase.h"
+// #include "PatternDatabases/CornerDBMaker.h"
 
 using namespace std;
 
 int main() {
-//    RubiksCube3dArray object3DArray;
+    // RubiksCube3dArray object3DArray;
 //    RubiksCube1dArray object1dArray;
 //    RubiksCubeBitboard objectBitboard;
 //
-//    object3DArray.print();
+    // object3DArray.print();
 //
-//    if (object3DArray.isSolved()) cout << "SOLVED\n\n";
-//    else cout << "NOT SOLVED\n\n";
+    // if (object3DArray.isSolved()) cout << "SOLVED\n\n";
+    // else cout << "NOT SOLVED\n\n";
 //
 //    if (object1dArray.isSolved()) cout << "SOLVED\n\n";
 //    else cout << "NOT SOLVED\n\n";
@@ -31,7 +30,7 @@ int main() {
 //    if (objectBitboard.isSolved()) cout << "SOLVED\n\n";
 //    else cout << "NOT SOLVED\n\n";
 //
-//    objectBitboard.u();
+    // objectBitboard.u();
 //    object3DArray.u();
 //    object1dArray.u();
 //    objectBitboard.print();
@@ -39,10 +38,10 @@ int main() {
 //    object1dArray.print();
 //
 //    objectBitboard.l();
-//    object3DArray.l();
+    // object3DArray.l();
 //    object1dArray.l();
 //    objectBitboard.print();
-//    object3DArray.print();
+    // object3DArray.print();
 //    object1dArray.print();
 //
 //    objectBitboard.f();
@@ -135,7 +134,7 @@ int main() {
 
     // Create two Cubes ------------------------------------------------------------------------------------------
 
-//    RubiksCube3dArray cube1;
+    // RubiksCube3dArray cube1;
 //    RubiksCube3dArray cube2;
 
 //    RubiksCube1dArray cube1;
@@ -150,7 +149,8 @@ int main() {
 //    if(cube1 == cube2) cout << "Is equal\n";
 //    else cout << "Not Equal\n";
 //
-//    cube1.randomShuffleCube(1);
+    // cube1.randomShuffleCube(8);
+    // cube1.print();
 //
 //    if(cube1 == cube2) cout << "Is equal\n";
 //    else cout << "Not Equal\n";
@@ -180,68 +180,69 @@ int main() {
 //
 
 // DFS Solver Testing __________________________________________________________________________________________
-//    RubiksCube3dArray cube;
-//    cube.print();
-//
-//    vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(6);
-//    for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    cube.print();
-//
-//    DFSSolver<RubiksCube3dArray, Hash3d> dfsSolver(cube, 8);
-//    vector<RubiksCube::MOVE> solve_moves = dfsSolver.solve();
-//
-//    for (auto move: solve_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    dfsSolver.rubiksCube.print();
+    // RubiksCube3dArray cube;
+    // cube.print();
+    //
+    // vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(6);
+    // for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
+    // cube.print();
+    //
+    // DFSSolver<RubiksCube3dArray, Hash3d> dfsSolver(cube, 8);
+    // vector<RubiksCube::MOVE> solve_moves = dfsSolver.solve();
+    //
+    // for (auto move: solve_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
+    // dfsSolver.rubiksCube.print();
 
 
 //BFS Solver -----------------------------------------------------------------------------------------------------
-//    RubiksCubeBitboard cube;
-//    cube.print();
-//
-//    vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(6);
-//    for(auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    cube.print();
-//
-//    BFSSolver<RubiksCubeBitboard, HashBitboard> bfsSolver(cube);
-//    vector<RubiksCube::MOVE> solve_moves = bfsSolver.solve();
-//
-//    for(auto move: solve_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    bfsSolver.rubiksCube.print();
+    RubiksCubeBitboard cube;
+    cube.print();
+
+    vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(6);
+    for(auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+    cout << "\n";
+    cube.print();
+
+    BFSSolver<RubiksCubeBitboard, HashBitboard> bfsSolver(cube);
+    vector<RubiksCube::MOVE> solve_moves = bfsSolver.solve();
+
+    // cout <<
+    for(auto move: solve_moves) cout << cube.getMove(move) << " ";
+    cout << "\n";
+    bfsSolver.rubiksCube.print();
 
 // IDDFS Solver ----------------------------------------------------------------------------------------------------
-//    RubiksCubeBitboard cube;
-//    cube.print();
-//
-//    vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(7);
-//    for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    cube.print();
-//
-//    IDDFSSolver<RubiksCubeBitboard, HashBitboard> iddfsSolver(cube, 7);
-//    vector<RubiksCube::MOVE> solve_moves = iddfsSolver.solve();
-//
-//    for (auto move: solve_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    iddfsSolver.rubiksCube.print();
+    // RubiksCubeBitboard cube;
+    // cube.print();
+    //
+    // vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(7);
+    // for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
+    // cube.print();
+    //
+    // IDDFSSolver<RubiksCubeBitboard, HashBitboard> iddfsSolver(cube, 7);
+    // vector<RubiksCube::MOVE> solve_moves = iddfsSolver.solve();
+    //
+    // for (auto move: solve_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
+    // iddfsSolver.rubiksCube.print();
 
 // IDA* SOLVER ---------------------------------------------------------------------------------------------------
-//    RubiksCubeBitboard cube;
-//    cube.print();
-//
-//    vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(5);
-//    for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    cube.print();
-//
-//    IDAstarSolver<RubiksCubeBitboard, HashBitboard> idAstarSolver(cube);
-//    vector<RubiksCube::MOVE> solve_moves = idAstarSolver.solve();
-//    for (auto move: solve_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    idAstarSolver.rubiksCube.print();
+    // RubiksCubeBitboard cube;
+    // cube.print();
+    //
+    // vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(5);
+    // for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
+    // cube.print();
+    //
+    // IDAstarSolver<RubiksCubeBitboard, HashBitboard> idAstarSolver(cube);
+    // vector<RubiksCube::MOVE> solve_moves = idAstarSolver.solve();
+    // for (auto move: solve_moves) cout << cube.getMove(move) << " ";
+    // cout << "\n";
+    // idAstarSolver.rubiksCube.print();
 
 // CornerPatternDatabase Testing ---------------------------------------------------------------------------------
 
@@ -268,7 +269,8 @@ int main() {
 
 
 //    Code to create Corner Database
-    string fileName = "C:\\Users\\DELL\\CLionProjects\\myFirstProject\\Databases\\mySolver.txt";
+    string fileName = "/Users/vikalpshakya/Downloads/RubiksCubeSolver-main/Databases/mySolver.txt";
+    // "/Users/vikalpshakya/Downloads/RubiksCubeSolver-main/Databases";
 
 
     // try {
@@ -307,38 +309,38 @@ int main() {
     // for (auto move: moves) cout << cube.getMove(move) << " ";
     // cout << "\n";
 
-    try {
-        string fileName = "C:\\Users\\DELL\\CLionProjects\\myFirstProject\\Databases\\cornerDepth5V1.txt";
-
-        // Code to create and use the CornerPatternDatabase and IDAstarSolver
-        RubiksCubeBitboard cube;
-        auto shuffleMoves = cube.randomShuffleCube(13);
-        cube.print();
-        cout << "Shuffle moves are -> ";
-        for (auto move: shuffleMoves) cout << cube.getMove(move) << " ";
-        cout << "\n";
-
-        IDAstarSolver<RubiksCubeBitboard, HashBitboard> idaStarSolver(cube, fileName);
-        auto moves = idaStarSolver.solve();
-
-        cout << endl << "----------------------------------------------" << endl;
-        cout << "Master I have solved the cube on your command " << "\n";
-        cout << "----------------------------------------------" << endl << endl;
-
-        cout << "The moves to solve are -> ";
-        for (auto move: moves) cout << cube.getMove(move) << " ";
-        cout << "\n";
-        cout << endl << "------------------------------------------------" << endl;
-        cout << "The Solved cube is" << endl;
-        idaStarSolver.rubiksCube.print();
-
-    } catch (const std::exception& e) {
-        std::cerr << "Standard exception: " << e.what() << std::endl;
-    } catch (const char* msg) {
-        std::cerr << "Caught an exception: " << msg << std::endl;
-    } catch (...) {
-        std::cerr << "Caught an unknown exception!" << std::endl;
-    }
+    // try {
+    //     string fileName = "C:\\Users\\DELL\\CLionProjects\\myFirstProject\\Databases\\cornerDepth5V1.txt";
+    //
+    //     // Code to create and use the CornerPatternDatabase and IDAstarSolver
+    //     RubiksCubeBitboard cube;
+    //     auto shuffleMoves = cube.randomShuffleCube(13);
+    //     cube.print();
+    //     cout << "Shuffle moves are -> ";
+    //     for (auto move: shuffleMoves) cout << cube.getMove(move) << " ";
+    //     cout << "\n";
+    //
+    //     IDAstarSolver<RubiksCubeBitboard, HashBitboard> idaStarSolver(cube, fileName);
+    //     auto moves = idaStarSolver.solve();
+    //
+    //     cout << endl << "----------------------------------------------" << endl;
+    //     cout << "Master I have solved the cube on your command " << "\n";
+    //     cout << "----------------------------------------------" << endl << endl;
+    //
+    //     cout << "The moves to solve are -> ";
+    //     for (auto move: moves) cout << cube.getMove(move) << " ";
+    //     cout << "\n";
+    //     cout << endl << "------------------------------------------------" << endl;
+    //     cout << "The Solved cube is" << endl;
+    //     idaStarSolver.rubiksCube.print();
+    //
+    // } catch (const std::exception& e) {
+    //     std::cerr << "Standard exception: " << e.what() << std::endl;
+    // } catch (const char* msg) {
+    //     std::cerr << "Caught an exception: " << msg << std::endl;
+    // } catch (...) {
+    //     std::cerr << "Caught an unknown exception!" << std::endl;
+    // }
 
 
     return 0;
